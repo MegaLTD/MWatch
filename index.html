@@ -124,10 +124,14 @@
         <div class="search-area">
             <i class="header__search-open mobile-search--toggle ion-ios-search"></i>
 <div class="top-search">
-  <div class="top-search__inner-wrapper">
-    <a href="https://search.arabymovies.tk/" class="header__search-open"><i class="ion-ios-search"></i></a>
-      <a href="https://search.arabymovies.tk/"> <input id="search_input" type="text" value="" placeholder="Search.arabymovies.tk"> </a>
-    <a href="https://search.arabymovies.tk/" class="header__search-close"><i class="ion-ios-close-empty"></i></a>
+      <form method="GET" action="movie.php">  
+   <div class="top-search__inner-wrapper">
+    <a class="header__search-open"><i class="ion-ios-search"></i></a>
+      <input name="search" id="search_input" type="text" value="" placeholder="Search the movie name...">
+    <a class="header__search-close"><i class="ion-ios-close-empty"></i></a>
+  </div>
+      </form>
+    
   </div>
   <div class="top-search__list" style="display: none;">
     <div id="movies-list"></div>
