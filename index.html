@@ -122,11 +122,13 @@
         <div class="search-area">
             <i class="header__search-open mobile-search--toggle ion-ios-search"></i>
 <div class="top-search">
+    <form method="GET" action="https://megawatch.22web.org/search.php">
   <div class="top-search__inner-wrapper">
-    <a href="https://search.arabymovies.tk/" class="header__search-open"><i class="ion-ios-search"></i></a>
-      <a href="https://search.arabymovies.tk/"> <input id="search_input" type="text" value="" placeholder="Search.arabymovies.tk"> </a>
-    <a href="https://search.arabymovies.tk/" class="header__search-close"><i class="ion-ios-close-empty"></i></a>
+    <a class="header__search-open"><i class="ion-ios-search"></i></a>
+      <input name="code" id="search_input" type="text" value="" placeholder="أدخل كود الفيلم أو المسلسل...">
+    <a class="header__search-close"><i class="ion-ios-close-empty"></i></a>
   </div>
+      </form>
   <div class="top-search__list" style="display: none;">
     <div id="movies-list"></div>
     <div id="shows-list"></div>
