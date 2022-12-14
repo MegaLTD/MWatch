@@ -26,33 +26,6 @@
     <link href="assets/all-3b800d6f2445144cf8f05f45aaf491bc.css" rel="stylesheet">
     <link href="assets/vendor-36b248d516cc49210c3101d9057e6cc0.css" rel="stylesheet">
 
-    <script>window.route="movies/genre";</script>    <script>
-        Yii2App = {
-            baseDomain: "megawatch.eu.org",
-            word: 'activerevenue',
-            ENV: "prod",
-            HOTLINK_SK_DURATION: 14000,
-            playbackStatus: 'limited',
-            apiDomain: "//api.megawatch.ag"
-        };
-
-        function debug(e){if("undefined"!=typeof Yii2App&&void 0!==Yii2App.ENV&&"dev"!==Yii2App.ENV)return!1;let i=new Date,o=i.getHours()+":"+i.getMinutes()+":"+i.getSeconds()+"."+i.getMilliseconds();console.log("%c["+o+"] "+e,"color:white; background: black; padding: 0 5px; border-radius: 0;")}
-
-        window['__fired_events'] = [];
-
-        function fire_event(EventName)
-        {
-            let event = document.createEvent('Event');
-            event.initEvent(EventName, true, true);
-            window.dispatchEvent(event);
-
-            debug('Fired Event: ' + EventName);
-
-            window['__fired_events'].push(EventName);
-        }
-
-    </script>
-
     <style>
         .mn-related-container .mn-thumb {
             background: #233a50;
@@ -77,7 +50,7 @@
         }
         .megawatch_logo{
             width:300px;
-            background-attachment: fixed;
+            position: fixed;
         }
 
     </style>
