@@ -2,15 +2,11 @@
 <?xml-stylesheet href="https://megawatch.eu.org/sitemap/sitemapindex.xsl" type="text/xsl"?>
 <sitemapindex xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd' xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
 	<sitemap>
-		<loc>https://megawatch.eu.org/sitemap/maps/map1.xml</loc>
+		<loc>https://megawatch.eu.org/</loc>
   		<lastmod>2023-03-22T09:53:30+00:00</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>https://megawatch.eu.org/sitemap/maps/map2.xml</loc>
-  		<lastmod>2023-03-22T09:53:30+00:00</lastmod>
-	</sitemap>
-	<sitemap>
-		<loc>https://megawatch.eu.org/sitemap/maps/map3.xml</loc>
+		<loc>https://megawatch.eu.org/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-2023/Al-Kabeer-Awi-7/</loc>
   		<lastmod>2023-03-22T09:53:30+00:00</lastmod>
 	</sitemap>
 </sitemapindex>
