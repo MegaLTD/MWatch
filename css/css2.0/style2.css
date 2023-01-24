@@ -131,7 +131,7 @@ header .navbar-light .navbar-brand img.logo {
 	z-index: 1;
 }
 .navbar-light .navbar-toggler-icon {
-	background: url(file:///E:/xampp/htdocs/files/Ramadan/templatees/streamit/templates.iqonic.design/streamit/frontend/html/images/menu.png) no-repeat scroll center center;
+	background: url(../../images/menu.png) no-repeat scroll center center;
 }
 .search-toggle:hover,
 header .navbar ul li.menu-item a:hover {
