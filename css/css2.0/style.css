@@ -44,7 +44,7 @@ Fonts
 
 /*==============================================
 Import css
-===============================================*/
+===============================================
 
 @import url('all.min.css');
 @import url('fontawesome.min.css');
@@ -52,7 +52,7 @@ Import css
 @import url('slick.min.css');
 @import url('owl.carousel.min.css');
 @import url('magnific-popup.min.css');
-
+*/
 /*================================================
 Moz Selection
 ================================================*/
@@ -359,7 +359,7 @@ select.form-control {
     background-size: 20px 20px;
 }
 
-/*======= Library ========*/
+/*======= Library ========
 
 .gen-library form input {
     margin-bottom: 30px;
@@ -372,7 +372,7 @@ select.form-control {
 .gen-library form .form-button {
     margin-bottom: 30px;
 }
-
+*/
 /*============================================
 Section
 ==============================================*/
@@ -435,16 +435,16 @@ Container
 }
 
 
-/*======Border=======*/
+/*======Border=======
 
 .gen-top-border {
     border-top: 1px solid #141B29;
 }
-
+*/
 
 /*================================================
 Loading
-================================================*/
+================================================
 #gen-loading {
     flex-direction: column;
     justify-content: center;
@@ -470,10 +470,10 @@ Loading
     height: 60px;
    }
 }
-
+*/
 /*================================================
 Back to Top
-================================================*/
+================================================
 #back-to-top .top {
     position: fixed;
     bottom: 75px;
@@ -498,7 +498,7 @@ Back to Top
     color: var(--white-color);
     border: 1px solid var(--primarydark-color);
 }
-
+*/
 
 /*================================================
 Button Core
@@ -628,7 +628,7 @@ input[type="button"],
 
 /*================================================
 Single Tv Show
-===============================================*/
+===============================================
 .gen-tv-show-top {
     margin: 90px 0;
 }
@@ -668,10 +668,10 @@ Single Tv Show
         margin: 30px 0;
     }
 }
-
+*/
 /*================================================
 Single Tv Season
-===============================================*/
+===============================================
 .single-episode .gen-single-tv-show-info,
 .single-video .gen-single-video-info {
     margin-bottom: 60px;
@@ -795,21 +795,20 @@ Single Tv Season
     border-right: 0;
     margin-right: 0;
 }
-
+*/
 /*================================================
 Quote From
-===============================================*/
+===============================================
 .gen-form input[type="text"],
 .gen-form textarea,
 .gen-form input[type="email"] {
     width: 100%;
     margin-bottom: 30px;
 }
-
-
+*/
 /*================================================
 Table
-===============================================*/
+===============================================
 .gen-comparison-table .table.table-striped {
     margin: 0;
 }
@@ -882,10 +881,10 @@ Table
         min-height: 65px;
     }
 }
-
+*/
 /*================================================
 Login, Register
-===============================================*/
+===============================================
 .gen-login-page-background,
 .gen-register-page-background,
 .recover-password-page-background {
@@ -980,8 +979,8 @@ Login, Register
     line-height: 26px;
     font-size: 18px;
 }
-
-/*==========*/
+*/
+/*==========
 .gen-pms-register .content-area .site-main {
     display: flex;
     align-items: center;
@@ -1047,8 +1046,8 @@ form#pms_register-form.pms-form ul.pms-form-fields-wrapper li.pms-field.pms-fiel
 .pms_field-errors-wrapper p {
     margin: 0;
 }
-
-/*==========*/
+*/
+/*==========
 #pms_recover_password_form {
     padding: 30px;
     background: var(--dark-color);
@@ -1072,8 +1071,8 @@ form#pms_register-form.pms-form ul.pms-form-fields-wrapper li.pms-field.pms-fiel
     line-height: 26px;
     font-size: 18px;
 }
-
-/*==========*/
+*/
+/*==========
 .gentechtreethemes-contain .pms-account-navigation ul {
     margin: 0 0 30px 0 !important;
 }
@@ -1113,8 +1112,8 @@ form#pms_register-form.pms-form ul.pms-form-fields-wrapper li.pms-field.pms-fiel
 #pms_new_subscription-form ul.pms-form-fields-wrapper li .pms-subscription-plan {
     margin-bottom: 15px;
 }
-
-/*==========*/
+*/
+/*==========
 form#pms_edit-profile-form.pms-form ul.pms-form-fields-wrapper li {
     width: 32.1111%;
     float: left;
@@ -1183,10 +1182,10 @@ form#pms_edit-profile-form.pms-form ul.pms-form-fields-wrapper li:nth-child(6) {
     }
 }
 
-
+*/
 /*================================================
 Pricing Plan
-================================================*/
+================================================
 .gen-price-block {
     background: var(--black-color);
     overflow: hidden;
@@ -1290,11 +1289,11 @@ Pricing Plan
         padding: 15px;
     }
 }
-
+*/
 
 /*================================================
 Blog Sidebar
-================================================*/
+================================================
 .widget {
     margin-bottom: 30px;
     display: inline-block;
@@ -1315,8 +1314,8 @@ Blog Sidebar
 .widget:last-child {
     margin-bottom: 0;
 }
-
-/*+++++ Widget Title +++++*/
+*/
+/*+++++ Widget Title +++++
 .widget .widget-title {
     margin-bottom: 15px;
     padding: 0;
@@ -1324,8 +1323,8 @@ Blog Sidebar
     position: relative;
     line-height: 32px;
 }
-
-/*+++++ SideBar - Search +++++*/
+*/
+/*+++++ SideBar - Search +++++
 .widget.widget_search .widget-title {
     color: var(--white-color);
 }
@@ -1399,8 +1398,8 @@ Blog Sidebar
     background: var(--primarydark-color);
     outline: none;
 }
-
-/*+++++ widget-menu +++++*/
+*/
+/*+++++ widget-menu +++++
 .widget ul {
     padding: 0;
     margin: 0;
@@ -1451,8 +1450,8 @@ Blog Sidebar
     line-height: normal;
     font-weight: 900;
 }
-
-/*+++++ SideBar - Recent Comments +++++*/
+*/
+/*+++++ SideBar - Recent Comments +++++
 .widget.widget_recent_comments #recentcomments li,
 .widget.widget_recent_comments ul li {
     padding-left: 20px;
@@ -1498,8 +1497,8 @@ Blog Sidebar
     font-weight: 400;
     color: var(--primary-color);
 }
-
-/*+++++  SideBar Calendar  +++++*/
+*/
+/*+++++  SideBar Calendar  +++++
 .widget_calendar table caption {
     caption-side: inherit;
     padding: 0 0 10px;
@@ -1534,8 +1533,8 @@ Blog Sidebar
     padding: 8px;
     text-align: center;
 }
-
-/*+++++  widget_categories  +++++*/
+*/
+/*+++++  widget_categories  +++++
 .widget.widget_categories ul li>a {
     padding-left: 30px;
 }
@@ -1551,8 +1550,8 @@ Blog Sidebar
 .widget_categories ul>li:last-child {
     margin-bottom: 0;
 }
-
-/*+++++  Meta - widget RSS +++++*/
+*/
+/*+++++  Meta - widget RSS +++++
 .widget.widget_rss ul li {
     margin-bottom: 30px;
 }
@@ -1593,22 +1592,22 @@ Blog Sidebar
     width: 100%;
     margin: 5px 0;
 }
-
-/*+++++ widget Nav Menu +++++*/
+*/
+/*+++++ widget Nav Menu +++++
 .widget.widget_nav_menu ul li .sub-menu,
 .widget ul.menu li .sub-menu {
     display: block !important;
     padding-left: 15px;
     margin-top: 15px;
 }
-
-/*+++++  SideBar - widget Recent Entries +++++*/
+*/
+/*+++++  SideBar - widget Recent Entries +++++
 .widget_recent_entries ul li .post-date {
     font-weight: 600;
     color: var(--dark-color);
 }
-
-/*+++++ SideBar - Tags +++++*/
+*/
+/*+++++ SideBar - Tags +++++
 .widget_tag_cloud .tag-cloud-link {
     font-size: 14px !important;
     background: var(--dark-color);
@@ -1633,8 +1632,8 @@ Blog Sidebar
     background: var(--primary-color);
     color: var(--white-color);
 }
-
-/*+++++ widget Dropdown +++++*/
+*/
+/*+++++ widget Dropdown +++++
 .widget select,
 .widget select.form-control {
     background-color: var(--dark-color);
@@ -1646,8 +1645,8 @@ Blog Sidebar
         margin-top: 45px;
     }
 }
-
-/*===== Comments Box =====*/
+*/
+/*===== Comments Box =====
 .comment-respond {
     margin-top: 0;
     display: inline-block;
@@ -1758,8 +1757,8 @@ Blog Sidebar
     font-style: italic;
     margin: 15px 0;
 }
-
-/*===== Comments Form =====*/
+*/
+/*===== Comments Form =====
 .comment-respond .comment-notes,
 .comment-respond .logged-in-as {
     padding: 0;
@@ -1801,16 +1800,16 @@ Blog Sidebar
     width: 32.2222%;
     float: left;
 }
-
-/*===== Comments Form =====*/
+*/
+/*===== Comments Form =====
 ol.commentlist .pingback,
 ol.commentlist .trackback {
     margin-left: 25px;
 }
-
+*/
 /*================================================
 Blog
-================================================*/
+================================================
 .gen-blog-contain .wp-block-group.has-background {
     color: var(--black-color);
     padding: 30px;
@@ -1968,10 +1967,10 @@ Blog
     }
 }
 
-
+*/
 /*================================================
 Pagination
-================================================*/
+================================================
 .gen-pagination .page-numbers {
     display: -ms-flexbox;
     display: flex;
@@ -2054,7 +2053,7 @@ Pagination
         line-height: 42px;
     }
 }
-
+*/
 /*================================================
 Home Blog
 ================================================*/
@@ -3405,7 +3404,7 @@ footer#gen-footer .gen-footer-style-1 .widget ul.menu li {
 
 /*================================================
 Team
-================================================*/
+================================================
 .gen-teambox-1 {
     position: relative;
     -webkit-border-radius: 5px;
@@ -3509,10 +3508,10 @@ Team
     line-height: 22px;
     text-transform: uppercase;
 }
-
+*/
 /*================================================
 Video Popup
-================================================*/
+================================================
 .gen-video-icon a {
     position: relative;
     text-decoration: none;
@@ -3611,12 +3610,12 @@ Video Popup
         box-shadow: 0 0 0 10px rgba(67, 78, 255, 0.2), 0 0 0 30px rgba(67, 78, 255, 0.2), 0 0 0 60px rgba(67, 78, 255, 0.2), 0 0 0 90px rgba(67, 78, 255, 0);
     }
 }
-
+*/
 
 
 /*================================================
 OWL Carousel
-================================================*/
+================================================
 .owl-carousel .owl-nav.disabled {
     display: none;
 }
@@ -3717,8 +3716,8 @@ OWL Carousel
         top: 26%;
     }
 }
-
-/* Dots */
+*/
+/* ====Dots==== 
 .owl-carousel .owl-dots.disabled {
     display: none;
 }
@@ -3763,11 +3762,11 @@ OWL Carousel
     background: var(--primary-color);
     opacity: 1;
 }
-
+*/
 
 /*================================================
 Gen Slick
-===============================================*/
+===============================================
 .pp-30 .gen-banner-movies .gen-movie-contain {
     padding: 0 0 0 30px;
 }
@@ -3992,12 +3991,12 @@ Gen Slick
 .slider.slider-nav.slick-initialized.slick-slider.slick-vertical ul.slick-dots{
     display: none !important;
 }
-
+*/
 /*================================================
 Carousel Movies
 ===============================================*/
 
-/*======== 1 =======*/
+/*======== 1 =======
 
 .gen-style-1 .owl-carousel .item .gen-carousel-movies-style-1 .gen-movie-contain {
     margin-bottom: 0;
@@ -4032,8 +4031,8 @@ Carousel Movies
 .gen-carousel-movies-style-1:hover .gen-movie-contain .gen-movie-img:before {
     opacity: 0.9;
 }
-
-/*===============*/
+*/
+/*===============
 .gen-carousel-movies-style-1 .gen-movie-contain .gen-movie-img {
     position: relative;
     overflow: hidden;
@@ -4211,8 +4210,8 @@ Carousel Movies
 .gen-carousel-movies-style-1.movie-grid.style-1 .gen-movie-contain .gen-movie-add .wpulike.wpulike-heart .wp_ulike_general_class a {
     color: var(--white-color);
 }
-
-/*===============*/
+*/
+/*===============
 .movie-grid .gen-movie-add {
     position: absolute;
     right: 10px;
@@ -4430,8 +4429,8 @@ Carousel Movies
         width: auto;
     }
 }
-
-/*===== Carousel Movies 2 =====*/
+*/
+/*===== Carousel Movies 2 =====
 .gen-carousel-movies-style-2 {
     margin-bottom: 30px;
     display: inline-block;
@@ -4633,8 +4632,8 @@ Carousel Movies
 .gen-carousel-movies-style-2.movie-grid.style-2 .gen-movie-contain .gen-movie-img .wpulike.wpulike-heart .wp_ulike_general_class a {
     color: var(--white-color);
 }
-
-/*===== Carousel Movies 3 =====*/
+*/
+/*===== Carousel Movies 3 =====
 .gen-carousel-movies-style-3 {
     margin-bottom: 30px;
     display: inline-block;
@@ -4842,7 +4841,7 @@ Carousel Movies
 .gen-carousel-movies-style-3.movie-grid.style-3 .gen-movie-contain .gen-movie-img .wpulike.wpulike-heart .wp_ulike_general_class a {
     color: var(--white-color);
 }
-
+*/
 /*================================================
 Movies Single
 ===============================================*/
