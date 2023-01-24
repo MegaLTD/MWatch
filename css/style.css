@@ -42,6 +42,8 @@
 [ End table content ]
 ======================================*/
 
+@import url('https://fonts.googleapis.com/css?family=Changa');
+@import url('https://fonts.googleapis.com/css?family=Aref Ruqaa');
 
 /*---------------------------------------------------------------------
                     Header
@@ -5127,13 +5129,8 @@ header .navbar ul li .sub-menu li:hover>a::before {
 	}
 }
 
+/* =========================================================== */
 
-
-
-
-/* arabic */
-@import url('https://fonts.googleapis.com/css?family=Changa');
-@import url('https://fonts.googleapis.com/css?family=Aref Ruqaa');
 .main-title, .iq-title, .text-white, .hover-buttons{
 	font-family: Changa;
 }
