@@ -409,6 +409,11 @@ header .navbar ul li:last-child {
   background-color: #D71014;
   color: white;
 }
+
+.button3Z:focus {
+  box-shadow: rgba(139,0,0, .1) 0 0 0 1px inset, rgba(139,0,0, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(255,0,0, .3) 0 0 0 4px; 
+}
+
 .foottxt{
 	text-align: center;
 	font-family: Changa;
