@@ -11,6 +11,11 @@
 <priority>1.00</priority>
 </url>
 <url>
+<loc>https://megawatch.eu.org/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-2023/</loc>
+<lastmod>2023-01-28T21:34:46+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
 <loc>https://megawatch.eu.org/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/</loc>
 <lastmod>2023-01-28T21:34:46+00:00</lastmod>
 <priority>0.80</priority>
@@ -30,11 +35,5 @@
 <lastmod>2023-01-28T21:34:46+00:00</lastmod>
 <priority>0.80</priority>
 </url>
-<url>
-<loc>https://megawatch.eu.org/%D8%B1%D9%85%D8%B6%D8%A7%D9%86-2023/</loc>
-<lastmod>2023-01-28T21:34:46+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-
 
 </urlset>
