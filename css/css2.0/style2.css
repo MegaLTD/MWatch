@@ -373,6 +373,22 @@ header .navbar ul li:last-child {
 		padding: 0 7px;
 }
 
+.tittl2{
+		text-align: right;
+		float: right;
+		font-family: Changa;
+		font-weight: bolder;
+		opacity: 1;
+		font-size: 25px;
+		color: white;
+		background-color: transparent;
+		background-size: cover;
+		margin-bottom: 15px;
+		border-radius: 10px;
+		border: 2px solid white;
+		padding: 0 7px;
+}
+
 .gen-front-image{
 	width: 150%;
 }
