@@ -7,7 +7,7 @@ function HTS(id,ep){
 		"444.unaux.com",
 		"10001.unaux.com"];
 	let i=Math.floor(Math.random() * 7);
-	let link = "http://"+H[i]+"/?id="+id+"&ep="+ep;
+	let link = "http://"+H[i]+"/MegaWatch/?id="+id+"&ep="+ep;
 	document.getElementById("HTSLink").setAttribute("href", link);
 
 }
