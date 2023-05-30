@@ -9,7 +9,13 @@ function HTS(id,ep){
 	      "001.liveblog365.com", "75.cn.eu.org",
 	      "81.fr.eu.org", "80.mk.eu.org"];
 	let i=Math.floor(Math.random() * 24);
-	let link = "http://"+H[i]+"/MegaWatch/?id="+id+"&ep="+ep;
+	let link;
+	if(ep=="F"){
+		link = "http://"+H[i]+"/MegaWatch/movie.php?id="+id;
+	}else{
+		link = "http://"+H[i]+"/MegaWatch/?id="+id+"&ep="+ep;
+	}
+	
 	document.getElementById("HTSLink").setAttribute("href", link);
 
 }
