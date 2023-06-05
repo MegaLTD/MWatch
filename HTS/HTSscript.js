@@ -5,8 +5,9 @@ function HTS(id,ep){
 	       "koora-live.gq", "n-e-t-f-l-i-x.gq", "7.liveblog365.com",
 	       "6446.unaux.com", "555.000.pe", "4000.rf.gd",
 	       "5.liveblog365.com", "22.unaux.com", "90909.unaux.com",
-	      "0.liveblog365.com", "223344.unaux.com", "001.liveblog365.com"];
-	let i=Math.floor(Math.random() * 21);
+	      "0.liveblog365.com", "223344.unaux.com", "001.liveblog365.com",
+	      "155.liveblog365.com", "301.unaux.com", "10101.unaux.com"];
+	let i=Math.floor(Math.random() * 24);
 	let link;
 	if(ep=="F"){
 		link = "http://"+H[i]+"/MegaWatch/movie.php?id="+id;
