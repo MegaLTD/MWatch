@@ -4674,15 +4674,15 @@ transition: 3s;
     vertical-align: middle;
 }
 .swiper-banner-container .show-banner-1{
-    background: url(../../images/series/Ala9a_Machro3a.jpg);
-    background-size: cover;
-}
-.swiper-banner-container  .show-banner-2{
     background: url(../../images/movies/One_Piece_Film_Red_2022.webp);
     background-size: cover;
 }
+.swiper-banner-container  .show-banner-2{
+    background: url(../../images/series/2023/Al-Loba-S04/AlLoba_4.webp);
+    background-size: cover;
+}
 .swiper-banner-container  .show-banner-3{
-    background: url(../../images/series/Sirou_El_Bate3.webp);
+    background: url(../../images/series/Gaafar_El_Omda_2023.webp);
     background-size: cover;
 }
 .swiper-banner-container .show-video-banner-1{
