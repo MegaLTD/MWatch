@@ -1,6 +1,6 @@
 function HTS(id,ep){
-	let H=["428910.42web.io", "6006.rf.gd", "404.000.pe", "psyplay.gq", "5.free.nf",
-	       "444.unaux.com", "7777.unaux.com", "999.000.pe", "arabymovies.ml", "9998.free.nf",
+	let H=["428910.42web.io", "6006.rf.gd", "404.000.pe", "psyplay.gq",
+	       "444.unaux.com", "7777.unaux.com", "999.000.pe", "arabymovies.ml",
 	       "arabymovies.gq", "10.000.pe", "42.42web.io", "psyplay.cf",
 	       "koora-live.gq", "n-e-t-f-l-i-x.gq", "7.liveblog365.com", "66.000.pe",
 	       "6446.unaux.com", "555.000.pe", "4000.rf.gd", "55.42web.io",
@@ -8,7 +8,7 @@ function HTS(id,ep){
 	      "0.liveblog365.com", "223344.unaux.com", "001.liveblog365.com", "78.rf.gd",
 	      "155.liveblog365.com", "301.unaux.com", "10101.unaux.com", "9.42web.io",
 	      "8177.000.pe", "2000.000.pe", "3210.rf.gd", "15.000.pe",
-	      "33.000.pe", "17.42web.io", "61.rf.gd", "404.free.nf"];
+	      "33.000.pe", "17.42web.io", "61.rf.gd"];
 	let n = H.length;
 	let i=Math.floor(Math.random() * n);
 	let link;
