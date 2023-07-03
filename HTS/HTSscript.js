@@ -8,7 +8,8 @@ function HTS(id,ep){
 	      "0.liveblog365.com", "223344.unaux.com", "001.liveblog365.com", "78.rf.gd",
 	      "155.liveblog365.com", "301.unaux.com", "10101.unaux.com", "9.42web.io",
 	      "8177.000.pe", "2000.000.pe", "3210.rf.gd", "15.000.pe",
-	      "33.000.pe", "17.42web.io", "61.rf.gd", "7613.free.nf", "1234.free.nf", "51.free.nf"];
+	      "33.000.pe", "17.42web.io", "61.rf.gd",
+	       "7613.free.nf", "1234.free.nf", "51.free.nf", "3333.42web.io", "9165.000.pe", "1117.free.nf"];
 	let n = H.length;
 	let i=Math.floor(Math.random() * n);
 	let link;
