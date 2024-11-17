@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../">
+                <img src="https://megawatch.eu.org/megawatch.png" alt="Logo MegaWatch" class="logo">
+            </a></li>
+            <li><a href="../">الرئيسية</a></li>
+            <li><a href="../" onclick="filterContent('film')">أفلام</a></li>
+            <li><a href="../" onclick="filterContent('serie')">مسلسلات</a></li>
+        </ul>
+    </nav>
+    
+    <header id="series-header">
+        <h1 id="series-title">تحميل...</h1>
+    </header>
+    <main>
+        <div class="grid-container" id="episodes-container"></div>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 موقع ميغا ووتش. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
