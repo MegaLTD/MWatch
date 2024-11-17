@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاهدة الحلقة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Header styles */
+        .episode-header {
+            text-align: center;
+            background-color: #1f1f1f;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .episode-header h1 {
+            font-size: 2.5rem;
+            color: #ff9800;
+        }
+
+        .episode-header p {
+            font-size: 1.2rem;
+            color: #bdbdbd;
+        }
+
+        /* Episode container styles */
+        .episode-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .episode-container img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .episode-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        .player-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: #ff9800;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .player-icon:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+            background-color: rgba(255, 152, 0, 0.9);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        video {
+            margin-top: 1rem;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="episode-header">
+            <div class="content">
+                <h1 id="series-title"></h1>
+                <p id="episode-info"></p>
+            </div>
+        </header>
+        <main>
+            <div class="episode-container">
+                <img id="series-image" src="" alt="صورة المسلسل">
+                <div id="player-icon" class="player-icon">
+                    <i class="fas fa-play"></i>
+                </div>
+                <video id="video-player" class="hidden" controls>
+                    <source id="video-source" type="video/mp4">
+                    متصفحك لا يدعم عرض الفيديو.
+                </video>
+            </div>
+        </main>
+    </div>
+    <script>
+        // Charger le fichier JSON et afficher les détails de l'épisode
+        fetch('series.json')
+            .then(response => response.json())
+            .then(seriesData => {
+                // Récupérer les paramètres de l'URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const seriesId = parseInt(urlParams.get('id'));
+                const episodeNumber = parseInt(urlParams.get('ep'));
+
+                // Trouver la série correspondante
+                const series = seriesData.find(item => item.id === seriesId);
+
+                if (series) {
+                    // Mettre à jour le titre, l'image et les informations
+                    document.getElementById('series-title').textContent = `مشاهدة ${series.titre} ${series.name}`;
+                    document.getElementById('episode-info').textContent = `الحلقة رقم ${episodeNumber} - ${series.annee}`;
+                    document.getElementById('series-image').src = series.image;
+
+                    // Gestionnaire de clic pour afficher le lecteur vidéo
+                    const playerIcon = document.getElementById('player-icon');
+                    const videoPlayer = document.getElementById('video-player');
+                    const videoSource = document.getElementById('video-source');
+
+                    playerIcon.addEventListener('click', () => {
+                        // Définir l'URL de la vidéo (exemple)
+                        videoSource.src = `https://example.com/videos/${series.name}-ep${episodeNumber}.mp4`;
+
+                        // Réinitialiser et afficher le lecteur vidéo
+                        videoPlayer.load();
+                        videoPlayer.classList.remove('hidden');
+                        playerIcon.classList.add('hidden');
+                    });
+                } else {
+                    // Redirection si la série n'existe pas
+                    window.location.href = "index.html";
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors du chargement des données:', error);
+                window.location.href = "index.html";
+            });
+    </script>
+</body>
+</html>
