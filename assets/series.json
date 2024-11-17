@@ -1,0 +1,19 @@
+[
+    {
+      "id" : 1,
+      "titre": "مسلسل",
+      "name": "alkabir",
+      "annee": 2017,
+      "nbr_episodes": 41,
+      "image": "https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
+    },
+    {
+      "id" : 2,
+      "titre": "فيلم",
+      "name": "alkabir2",
+      "annee": 2010,
+      "nbr_episodes": 0,
+      "image": "https://img.freepik.com/photos-gratuite/design-colore-design-spirale_188544-9588.jpg"
+    }
+  ]
+  
