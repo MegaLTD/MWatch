@@ -1,4 +1,4 @@
-fetch("../series.json")
+fetch("https://megawatch.eu.org/series.json")
     .then(response => response.json())
     .then((seriesData) => {
         const urlParams = new URLSearchParams(window.location.search);
