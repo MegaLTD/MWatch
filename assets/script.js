@@ -1,4 +1,4 @@
-fetch('https://megawatch.eu.org/assets/series.json')
+fetch('series.json')
     .then(response => response.json())
     .then(data => {
         const container = document.getElementById('grid-container');
