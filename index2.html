@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>megawatch.eu.org</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="">
+                <img src="https://megawatch.eu.org/megawatch.png" alt="Logo MegaWatch" class="logo">
+            </a></li>
+            <li><a href="">الرئيسية</a></li>
+            <li><a href="#" onclick="filterContent('film')">أفلام</a></li>
+            <li><a href="#" onclick="filterContent('serie')">مسلسلات</a></li>
+            <li>
+                <input 
+                    type="text" 
+                    id="search-bar" 
+                    placeholder="ابحث عن اسم..." 
+                    oninput="searchContent(event)" 
+                />
+            </li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>موقع ميغا ووتش</h1>
+    </header>
+
+    <div class="filter-container">
+        <button onclick="filterContent('all')">الكل</button>
+        <button onclick="filterContent('film')">أفلام</button>
+        <button onclick="filterContent('serie')">مسلسلات</button>
+    </div>
+
+    <main>
+        <div class="grid-container" id="grid-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 موقع ميغا ووتش. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
