@@ -13,17 +13,17 @@ fetch('series.json')
 
             gridItem.innerHTML = `
             <div class="card">
-                <a href="http://localhost/megawatch.eu.org/ramadan/?id=${item.id}">
+                <a href="../ramadan/?id=${item.id}">
                     <img src="${item.image}" alt="${item.titre}" class="card-image">
                 </a>
                 <div class="card-content">
-                    <a href="http://localhost/megawatch.eu.org/ramadan/?id=${item.id}" class="card-title">
+                    <a href="../ramadan/?id=${item.id}" class="card-title">
                         <h3>${item.titre}</h3>
                     </a>
                     <p class="card-description">
                         ${item.annee} - ${item.nbr_episodes === 0 || item.nbr_episodes === null ? 'Film' : 'Série'}
                     </p>
-                    <center><a href="http://localhost/megawatch.eu.org/ramadan/?id=${item.id}" class="watch-button">شاهد الآن</a></center>
+                    <center><a href="../ramadan/?id=${item.id}" class="watch-button">شاهد الآن</a></center>
                 </div>
             </div>
         `;
