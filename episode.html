@@ -97,6 +97,24 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="">
+                <img src="megawatch.png" alt="MegaWatch" class="logo">
+            </a></li>
+            <li><a href="">الرئيسية</a></li>
+            <li><a href="#" onclick="filterContent('film')">أفلام</a></li>
+            <li><a href="#" onclick="filterContent('serie')">مسلسلات</a></li>
+            <li>
+                <input 
+                    type="text" 
+                    id="search-bar" 
+                    placeholder="ابحث عن اسم..." 
+                    oninput="searchContent(event)" 
+                />
+            </li>
+        </ul>
+    </nav>
     <div class="container">
         <header class="episode-header">
             <div class="content">
