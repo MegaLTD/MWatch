@@ -31,11 +31,10 @@ fetch('servers.json')
     .then(response => response.json())
     .then(servers => {
         // Générer un ID aléatoire pour les serveurs
-        const randomIndex = Math.floor(Math.random() * servers.length);
         const selectedServer = servers[randomIndex];
 
         // Modifier dynamiquement le lien <a>
         const linkElement = document.querySelector('.xtgo');
-        linkElement.href = `${selectedServer}?id=${randomIndex + 1}`; // Ajouter l'ID
+        linkElement.href = `${selectedServer}?id=${getQueryParam('id');}`; // Ajouter l'ID
     })
     .catch(error => console.error("Erreur lors du chargement des serveurs:", error));
