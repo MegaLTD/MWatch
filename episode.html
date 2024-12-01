@@ -98,7 +98,7 @@
         .episode-header {
             text-align: center;
             background-color: #1f1f1f;
-            padding: 1rem;
+            padding: 2rem;
             border-radius: 15px;
             margin-bottom: 2rem;
         }
@@ -113,68 +113,9 @@
             color: #bdbdbd;
         }
 
-        .episode-container {
-            position: relative;
-            text-align: center;
-        }
+  
 
-        .episode-container img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 15px;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .episode-container img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-        }
-
-        .player-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.7);
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .player-icon:hover {
-            transform: translate(-50%, -50%) scale(1.15);
-            background-color: rgba(255, 152, 0, 0.9);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        video {
-            margin-top: 1rem;
-            width: 100%;
-            max-width: 600px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            transition: opacity 0.3s ease;
-            opacity: 0;
-        }
-
-        video.visible {
-            opacity: 1;
-        }
-
+  
     </style>
 </head>
 <body>
