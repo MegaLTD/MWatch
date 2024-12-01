@@ -4,7 +4,7 @@ function getQueryParam(param) {
     return urlParams.get(param);
 }
 
-// Charger les données JSON
+// Charger les séries depuis series.json
 fetch('series.json')
     .then(response => response.json())
     .then(series => {
@@ -24,4 +24,18 @@ fetch('series.json')
             console.error("Aucun ID fourni dans l'URL.");
         }
     })
-    .catch(error => console.error("Erreur lors du chargement des données JSON:", error));
+    .catch(error => console.error("Erreur lors du chargement des séries:", error));
+
+// Charger les serveurs depuis servers.json
+fetch('servers.json')
+    .then(response => response.json())
+    .then(servers => {
+        // Générer un ID aléatoire pour les serveurs
+        const randomIndex = Math.floor(Math.random() * servers.length);
+        const selectedServer = servers[randomIndex];
+
+        // Modifier dynamiquement le lien <a>
+        const linkElement = document.querySelector('.xtgo');
+        linkElement.href = `${selectedServer}?id=${randomIndex + 1}`; // Ajouter l'ID
+    })
+    .catch(error => console.error("Erreur lors du chargement des serveurs:", error));
