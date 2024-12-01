@@ -153,12 +153,13 @@
         </main>
     </div>
     <script>
-        const serieId = getQueryParam('id');
-        const epId = getQueryParam('ep');
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
         }
+
+        const serieId = getQueryParam('id');
+        const epId = getQueryParam('ep');
 
         function checkParamsAndRedirect() {
             if (!serieId || !epId) {
