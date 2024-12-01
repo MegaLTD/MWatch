@@ -175,36 +175,18 @@ if (!checkParamsAndRedirect()) {
         fetch('series.json')
             .then(response => response.json())
             .then(seriesData => {
-                // Récupérer les paramètres de l'URL
                 const urlParams = new URLSearchParams(window.location.search);
                 const seriesId = urlParams.get('id');
                 const episodeNumber = urlParams.get('ep');
 
-                // Vérifier si les paramètres sont valides
-                if (!seriesId || !episodeNumber) {
-                    window.location.href = "index.html"; // Redirection si les paramètres manquent
-                    return;
-                }
-
-                // Trouver la série correspondante
-                const series = seriesData.find(item => item.id === parseInt(seriesId));
-
-                if (series) {
-                    // Mettre à jour le titre, l'image et les informations
-                    document.getElementById('series-title').textContent = `مشاهدة ${series.titre} ${series.name}`;
-                    document.getElementById('episode-info').textContent = `الحلقة رقم ${episodeNumber} - ${series.annee}`;
+                document.getElementById('series-title').textContent = `مشاهدة ${series.titre} ${series.name}`;
+                document.getElementById('episode-info').textContent = `الحلقة رقم ${episodeNumber} - ${series.annee}`;
                     
-                    // Charger l'iframe avec la page watch.html
-                    const iframe = document.getElementById('watch-frame');
-                    iframe.src = `watch.html?id=${seriesId}&ep=${episodeNumber}`;
-                } else {
-                    // Redirection si la série n'existe pas
-                    window.location.href = "index.html";
-                }
+                const iframe = document.getElementById('watch-frame');
+                iframe.src = `watch.html?id=${seriesId}&ep=${episodeNumber}`;
             })
             .catch(error => {
-                console.error('Erreur lors du chargement des données:', error);
-                window.location.href = "index.html"; // Redirection en cas d'erreur
+                console.error('Error:', error);
             });
 
         fetch('servers.json')
