@@ -44,26 +44,5 @@ if (!checkParamsAndRedirect()) {
         })
         .catch(error => console.error("Erreur lors du chargement des séries:", error));
 
-    // Charger les serveurs depuis servers.json
-    fetch('servers.json')
-        .then(response => response.json())
-        .then(servers => {
-            if (servers.length > 0) {
-                // Générer un ID aléatoire pour les serveurs
-                const randomIndex = Math.floor(Math.random() * servers.length);
-                const selectedServer = servers[randomIndex];
 
-                // Modifier dynamiquement le lien <a>
-                const linkElement = document.querySelector('.xtgo');
-                const serieId = getQueryParam('id');
-                const episodeId = getQueryParam('ep');
-                
-                // Construire l'URL avec les paramètres 'id' et 'ep'
-                linkElement.href = `${selectedServer}?id=${serieId || ''}&ep=${episodeId || ''}`;
-                console.log(`Serveur sélectionné : ${selectedServer}, Lien : ${linkElement.href}`);
-            } else {
-                console.error("Aucune adresse serveur disponible dans servers.json.");
-            }
-        })
-        .catch(error => console.error("Erreur lors du chargement des serveurs:", error));
 }
