@@ -30,11 +30,17 @@ fetch('series.json')
 fetch('servers.json')
     .then(response => response.json())
     .then(servers => {
-        // Générer un ID aléatoire pour les serveurs
-        const selectedServer = servers[randomIndex];
+        if (servers.length > 0) {
+            // Générer un ID aléatoire pour les serveurs
+            const randomIndex = Math.floor(Math.random() * servers.length);
+            const selectedServer = servers[randomIndex];
 
-        // Modifier dynamiquement le lien <a>
-        const linkElement = document.querySelector('.xtgo');
-        linkElement.href = `${selectedServer}?id=${getQueryParam('id');}`; // Ajouter l'ID
+            // Modifier dynamiquement le lien <a>
+            const linkElement = document.querySelector('.xtgo');
+            const serieId = getQueryParam('id');
+            linkElement.href = `${selectedServer}?id=${serieId || ''}`; // Ajouter l'ID s'il est disponible
+        } else {
+            console.error("Aucune adresse serveur disponible dans servers.json.");
+        }
     })
     .catch(error => console.error("Erreur lors du chargement des serveurs:", error));
