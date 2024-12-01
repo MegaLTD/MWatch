@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -208,16 +207,7 @@
             </div>
         </header>
         <main>
-            <div class="episode-container">
-                <img id="series-image" src="" alt="صورة المسلسل">
-                <div id="player-icon" class="player-icon">
-                    <i class="fas fa-play"></i>
-                </div>
-                <video id="video-player" class="hidden" controls>
-                    <source id="video-source" type="video/mp4">
-                    متصفحك لا يدعم عرض الفيديو.
-                </video>
-            </div>
+            <iframe id="watch-frame" width="100%" height="500px" src="" frameborder="0"></iframe>
         </main>
     </div>
     <script>
@@ -227,33 +217,26 @@
             .then(seriesData => {
                 // Récupérer les paramètres de l'URL
                 const urlParams = new URLSearchParams(window.location.search);
-                const seriesId = parseInt(urlParams.get('id'));
-                const episodeNumber = parseInt(urlParams.get('ep'));
+                const seriesId = urlParams.get('id');
+                const episodeNumber = urlParams.get('ep');
+
+                // Vérifier si les paramètres sont valides
+                if (!seriesId || !episodeNumber) {
+                    window.location.href = "index.html"; // Redirection si les paramètres manquent
+                    return;
+                }
 
                 // Trouver la série correspondante
-                const series = seriesData.find(item => item.id === seriesId);
+                const series = seriesData.find(item => item.id === parseInt(seriesId));
 
                 if (series) {
                     // Mettre à jour le titre, l'image et les informations
                     document.getElementById('series-title').textContent = `مشاهدة ${series.titre} ${series.name}`;
                     document.getElementById('episode-info').textContent = `الحلقة رقم ${episodeNumber} - ${series.annee}`;
-                    document.getElementById('series-image').src = series.image;
-
-                    // Gestionnaire de clic pour afficher le lecteur vidéo
-                    const playerIcon = document.getElementById('player-icon');
-                    const videoPlayer = document.getElementById('video-player');
-                    const videoSource = document.getElementById('video-source');
-
-                    playerIcon.addEventListener('click', () => {
-                        // Définir l'URL de la vidéo (exemple)
-                        videoSource.src = `https://example.com/videos/${series.name}-ep${episodeNumber}.mp4`;
-
-                        // Réinitialiser et afficher le lecteur vidéo
-                        videoPlayer.load();
-                        videoPlayer.classList.remove('hidden');
-                        videoPlayer.classList.add('visible');
-                        playerIcon.classList.add('hidden');
-                    });
+                    
+                    // Charger l'iframe avec la page watch.html
+                    const iframe = document.getElementById('watch-frame');
+                    iframe.src = `watch.html?id=${seriesId}&ep=${episodeNumber}`;
                 } else {
                     // Redirection si la série n'existe pas
                     window.location.href = "index.html";
@@ -261,7 +244,7 @@
             })
             .catch(error => {
                 console.error('Erreur lors du chargement des données:', error);
-                window.location.href = "index.html";
+                window.location.href = "index.html"; // Redirection en cas d'erreur
             });
     </script>
 </body>
