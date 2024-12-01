@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -149,21 +148,19 @@
         </header>
         <main>
             <center>
-                <!-- Removed <a> tag, directly updated iframe -->
                 <iframe id="watch-frame" width="800px" height="550px" src="" frameborder="0"></iframe>
             </center>
         </main>
     </div>
     <script>
+        const serieId = getQueryParam('id');
+        const epId = getQueryParam('ep');
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
         }
 
         function checkParamsAndRedirect() {
-            const serieId = getQueryParam('id');
-            const epId = getQueryParam('ep');
-        
             if (!serieId || !epId) {
                 window.location.href = 'https://megawatch.eu.org'; 
                 return true;  
@@ -176,11 +173,9 @@
                 .then(response => response.json())
                 .then(seriesData => {
                     const urlParams = new URLSearchParams(window.location.search);
-                    const seriesId = urlParams.get('id');
-                    const episodeNumber = urlParams.get('ep');
 
                     document.getElementById('series-title').textContent = `مشاهدة ${seriesData.titre} ${seriesData.name}`;
-                    document.getElementById('episode-info').textContent = `الحلقة رقم ${episodeNumber} - ${seriesData.annee}`;
+                    document.getElementById('episode-info').textContent = `الحلقة رقم ${epId} - ${seriesData.annee}`;
                         
                     const iframe = document.getElementById('watch-frame');
                     iframe.src = `watch.html?id=${seriesId}`;
@@ -198,10 +193,8 @@
                         const selectedServer = servers[randomIndex];
 
                         const iframe = document.getElementById('watch-frame');
-                        const serieId = new URLSearchParams(window.location.search).get('id');
-                        const episodeId = new URLSearchParams(window.location.search).get('ep');
                         
-                        iframe.src = `${selectedServer}?id=${serieId || ''}&ep=${episodeId || ''}`;
+                        iframe.src = `${selectedServer}?id=${serieId || ''}&ep=${epId || ''}`;
                     }
                 })
                 .catch(error => console.error("Error:", error));
