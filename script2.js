@@ -17,21 +17,16 @@ if (!checkParamsAndRedirect()) {
         .then(response => response.json())
         .then(series => {
             const serieId = getQueryParam('id');
-            const episodeId = getQueryParam('ep');  
             if (serieId) {
                 const serie = series.find(item => item.id === parseInt(serieId));
                 if (serie) {
                     const posterElement = document.getElementById('poster');
                     posterElement.style.backgroundImage = `url(${serie.image})`;
                     console.log(`Série trouvée : ${serie.titre}, ID: ${serieId}, Episode: ${episodeId}`);
-                } else {
-                    console.error("Série non trouvée pour l'ID donné.");
                 }
-            } else {
-                console.error("Aucun ID fourni dans l'URL.");
             }
         })
-        .catch(error => console.error("Erreur lors du chargement des séries:", error));
+        .catch(error => console.error("error:", error));
 
     function generateRandomTime() {
         const minutes = Math.floor(Math.random() * 30) + 30;
