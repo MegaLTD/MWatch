@@ -162,8 +162,9 @@
 
         function checkParamsAndRedirect() {
             const serieId = getQueryParam('id');
+            const epId = getQueryParam('ep');
         
-            if (!serieId) {
+            if (!serieId || !epId) {
                 window.location.href = 'https://megawatch.eu.org'; 
                 return true;  
             }
