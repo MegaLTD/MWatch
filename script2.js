@@ -23,7 +23,6 @@ if (!checkParamsAndRedirect()) {
     fetch('series.json')
         .then(response => response.json())
         .then(series => {
-            // Récupérer l'ID depuis les paramètres de l'URL
             const serieId = getQueryParam('id');
             const episodeId = getQueryParam('ep');  // Récupérer le paramètre 'ep'
             
@@ -45,27 +44,19 @@ if (!checkParamsAndRedirect()) {
         .catch(error => console.error("Erreur lors du chargement des séries:", error));
 }
 
-
-
+// Générer un temps aléatoire
 function generateRandomTime() {
-            // Générer une minute aléatoire entre 30 et 59
-            const minutes = Math.floor(Math.random() * 30) + 30;
-            // Générer une seconde aléatoire entre 0 et 59
-            const seconds = Math.floor(Math.random() * 60);
-            
-            // Formater les minutes et les secondes pour avoir toujours deux chiffres
-            const formattedMinutes = minutes.toString().padStart(2, '0');
-            const formattedSeconds = seconds.toString().padStart(2, '0');
+    const minutes = Math.floor(Math.random() * 30) + 30;  // Générer une minute aléatoire entre 30 et 59
+    const seconds = Math.floor(Math.random() * 60);  // Générer une seconde aléatoire entre 0 et 59
+    
+    const formattedMinutes = minutes.toString().padStart(2, '0');
+    const formattedSeconds = seconds.toString().padStart(2, '0');
+    
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
 
-            // Retourner le temps formaté
-            return `${formattedMinutes}:${formattedSeconds}`;
-        }
-
-        // Mettre à jour le contenu de l'élément avec l'ID 'time-display'
-        function updateTime() {
-            const timeDisplay = document.getElementById('time-display');
-            timeDisplay.textContent = generateRandomTime();
-        }
-
-        // Mettre à jour le temps toutes les 3 secondes
-        setInterval(updateTime, 3000);
+// Mettre à jour le contenu de l'élément avec l'ID 'time-display'
+function updateTime() {
+    const timeDisplay = document.getElementById('time-display');
+    timeDisplay.textContent = generateRandomTime();
+}
