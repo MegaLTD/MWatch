@@ -156,7 +156,22 @@
         </main>
     </div>
     <script>
-        // Charger le fichier JSON et afficher les détails de l'épisode
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+    function checkParamsAndRedirect() {
+        const serieId = getQueryParam('id');
+    
+        if (!serieId) {
+            window.location.href = 'https://megawatch.eu.org'; 
+            return true;  
+        }
+        return false;  
+    }
+
+if (!checkParamsAndRedirect()) {
         fetch('series.json')
             .then(response => response.json())
             .then(seriesData => {
@@ -192,7 +207,6 @@
                 window.location.href = "index.html"; // Redirection en cas d'erreur
             });
 
-        // Charger les serveurs depuis servers.json
         fetch('servers.json')
             .then(response => response.json())
             .then(servers => {
@@ -214,6 +228,7 @@
                 }
             })
             .catch(error => console.error("Erreur lors du chargement des serveurs:", error));
+}
     </script>
 </body>
 </html>
