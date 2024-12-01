@@ -222,12 +222,9 @@ if (!checkParamsAndRedirect()) {
                     
                     // Construire l'URL avec les paramètres 'id' et 'ep'
                     linkElement.href = `${selectedServer}?id=${serieId || ''}&ep=${episodeId || ''}`;
-                    console.log(`Serveur sélectionné : ${selectedServer}, Lien : ${linkElement.href}`);
-                } else {
-                    console.error("Aucune adresse serveur disponible dans servers.json.");
                 }
             })
-            .catch(error => console.error("Erreur lors du chargement des serveurs:", error));
+            .catch(error => console.error("Error:", error));
 }
     </script>
 </body>
