@@ -18,7 +18,7 @@ fetch("../series.json")
             header.style.backgroundImage = `url('${series.image}')`;
 
             const title = document.getElementById("series-title");
-            title.textContent = `مشاهدة حلقات ${series.titre} ${series.name}`;
+            title.textContent = `مشاهدة حلقات ${series.titre}`;
 
             const episodesContainer = document.getElementById("episodes-container");
             episodesContainer.className = "episode-grid";
@@ -30,7 +30,6 @@ fetch("../series.json")
                 button.textContent = `الحلقة ${i}`;
                 button.className = "episode-button";
 
-                // Ajouter l'événement de redirection
                 button.addEventListener("click", () => {
                     const redirectUrl = `../episode.html?id=${numericId}&ep=${i}`;
                     window.location.href = redirectUrl;
@@ -44,6 +43,6 @@ fetch("../series.json")
         }
     })
     .catch(error => {
-        console.error("Erreur lors du chargement des données:", error);
-        window.location.href = "index.html";
+        console.error("Error", error);
+        window.location.href = "https://megawatch.eu.org";
     });
