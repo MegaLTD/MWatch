@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="noindex">
-	<title>الموقع مغلق الآن – ميغا ووتش</title>
-	<link rel="shortcut icon" href="Icon.png" type="image/png">
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Changa&display=swap');
-		body{
-			background-color:#333;
-		}
-		
-		h1{
-			font-family: Changa;
-			text-align: center;
-			color: white;
-		}
-		img{
-			margin-top:20px;
-			width:300px;
-			background-color: white;
-			border-radius: 6px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Icon.png" type="image/png">
+    <title>ميغا ووتش - موقع مشاهدة وتحميل أفضل المسلسلات والأفلام</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/script.js" defer></script>
 </head>
-<body dir="auto">
-	<center>
-		<img src="megawatch.png"></br>
-		<h1>الموقع مغلق الآن</h1>
-	</center>
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://megawatch.eu.org">
+                <img src="megawatch.png" alt="Logo MegaWatch" class="logo">
+            </a></li>
+            <li><a href="https://megawatch.eu.org">الرئيسية</a></li>
+            <li><a href="#" onclick="filterContent('film')">أفلام</a></li>
+            <li><a href="#" onclick="filterContent('serie')">مسلسلات</a></li>
+            <li>
+                <input 
+                    type="text" 
+                    id="search-bar" 
+                    placeholder="ابحث عن اسم..." 
+                    oninput="searchContent(event)" 
+                />
+            </li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>موقع ميغا ووتش</h1>
+    </header>
+
+    <div class="filter-container">
+        <button onclick="filterContent('all')">الكل</button>
+        <button onclick="filterContent('film')">أفلام</button>
+        <button onclick="filterContent('serie')">مسلسلات</button>
+    </div>
+
+    <main>
+        <div class="grid-container" id="grid-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 موقع ميغا ووتش. جميع الحقوق محفوظة.</p>
+    </footer>
+
 </body>
 </html>
