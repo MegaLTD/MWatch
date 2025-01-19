@@ -13,17 +13,17 @@ fetch('series.json')
 
             gridItem.innerHTML = `
             <div class="card">
-                <a href="../ramadan/?id=${item.id}">
+                <a href="http://127.0.0.1:5500/ramadan/?id=${item.id}">
                     <img src="${item.image}" alt="${item.titre}" class="card-image">
                 </a>
                 <div class="card-content">
-                    <a href="../ramadan/?id=${item.id}" class="card-title">
+                    <a href="http://127.0.0.1:5500/ramadan/?id=${item.id}" class="card-title">
                         <h3>${item.titre}</h3>
                     </a>
                     <p class="card-description">
-                        ${item.annee} - ${item.nbr_episodes === 0 || item.nbr_episodes === null ? 'Film' : 'Série'}
+                        رمضان ${item.annee}
                     </p>
-                    <center><a href="../ramadan/?id=${item.id}" class="watch-button">شاهد الآن</a></center>
+                    <center><a href="http://127.0.0.1:5500/ramadan/?id=${item.id}" class="watch-button">شاهد الآن</a></center>
                 </div>
             </div>
         `;
@@ -32,7 +32,10 @@ fetch('series.json')
             container.appendChild(gridItem);
         });
     })
-    .catch(error => console.error('Erreur lors du chargement des données:', error));
+    .catch(error => {
+        console.error('Error', error);
+        window.location.href = 'https://megawatch.eu.org';
+    });
 
 function filterContent(type) {
     const items = document.querySelectorAll('.grid-item');
