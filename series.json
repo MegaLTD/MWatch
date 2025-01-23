@@ -1,18 +1,11 @@
 [
   {
     "id" : 1,
-    "titre": "مسلسل العتاولة 2",
-    "name": "El_Atawla_2",
+    "titre": "مسلسل موضوع عائلي الموسم 3",
+    "name": "Mawdou_Aeli_3",
     "annee": 2025,
-    "nbr_episodes": 35,
-    "image": "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-path-by-a-pond-free-image.jpg"
-  },
-  {
-    "id" : 2,
-    "titre": "مسلسل أ",
-    "name": "mousalsal2",
-    "annee": 2025,
-    "nbr_episodes": 30,
-    "image": "https://cdn.create.vista.com/api/media/small/26420191/stock-photo-summer-field-with-cumulus-clouds"
+    "nbr_episodes": 10,
+    "image": "https://i.imgur.com/VWDmS1e.jpeg",
+    "img_ep": ["https://i.imgur.com/PPCWlzx.jpeg", "https://i.imgur.com/6I86YC6.jpeg", "https://i.imgur.com/QrQH0tw.jpeg", "https://i.imgur.com/RgyQUar.jpeg", "https://i.imgur.com/T4nxQP5.jpeg", "https://i.imgur.com/754LXEn.jpeg", "https://i.imgur.com/UVguDTH.jpeg", "https://i.imgur.com/e9Z81JB.jpeg", "https://i.imgur.com/l73viTx.jpeg", "https://i.imgur.com/aaoyY1u.jpeg"]
   }
 ]
