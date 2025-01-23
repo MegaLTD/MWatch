@@ -53,7 +53,7 @@ if (!checkParamsAndRedirect()) {
                     .then(servers => {
                         if (servers.length > 0) {
                             const randomServer = servers[Math.floor(Math.random() * servers.length)];
-                            const videoUrl = `https://${randomServer}/${serie.name}/?id=${serieId}&ep=${parseInt(epId, 10)}`;
+                            const videoUrl = `https://${randomServer}/?id=${serieId}&ep=${parseInt(epId, 10)}`;
                             const playerIcon = document.getElementById('player-icon');
                             const seriesImage = document.getElementById('series-image');
 
