@@ -22,7 +22,9 @@ if (!checkParamsAndRedirect()) {
             if (serie) {
                 document.getElementById('series-title').textContent = `مشاهدة ${serie.titre}`;
                 document.getElementById('episode-info').textContent = `الحلقة ${parseInt(epId, 10)} - رمضان ${serie.annee}`;
-                document.getElementById('series-image').src = serie.image;
+
+                const episodeImage = serie.img_ep[parseInt(epId, 10) - 1] || serie.image;
+                document.getElementById('series-image').src = episodeImage;
 
                 const nbrEpisodes = serie.nbr_episodes;
                 const previousButton = document.getElementById('previous-button');
