@@ -254,7 +254,15 @@ footer p {
     background-color: #ffc107;
     transform: scale(1.05);
 }
-
+.menu-toggle {
+    display: none;
+    background-color: #ff9800;
+    border: none;
+    color: #121212;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     .episode-grid {
@@ -275,4 +283,23 @@ footer p {
         margin: 0.5rem 0.2rem;
         padding: 0.7rem 1.2rem;
     }
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1f1f1f;
+        padding: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
 }
+
