@@ -265,6 +265,28 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .filter-container button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .watch-button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
     .episode-grid {
         grid-template-columns: repeat(2, 1fr); 
         gap: 1rem;
