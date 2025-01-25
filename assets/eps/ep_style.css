@@ -1,7 +1,9 @@
+/* Importation de la police Cairo */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
+/* Styles globaux */
 body {
-    font-family: 'Cairo';
+    font-family: 'Cairo', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
@@ -9,6 +11,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Navigation */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -16,8 +19,32 @@ body {
     width: 100%;
 }
 
+nav {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Permettre la flexibilité pour les petits écrans */
+}
+
 nav ul.hidden {
     display: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
 }
 
 nav ul li a {
@@ -50,57 +77,18 @@ nav .logo {
     transition: transform 0.3s ease;
 }
 
-
-nav {
-    background-color: #1f1f1f;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap; /* Permettre la flexibilité pour les petits écrans */
-}
-
-nav ul li {
-    display: flex;
-    align-items: center;
-}
-
-nav ul li a {
-    font-size: 1.1rem;
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ff9800;
-}
-
-nav .logo {
-    height: 50px;
-    transition: transform 0.3s ease;
-}
-
 nav .logo:hover {
     transform: scale(1.08);
 }
 
+/* Container principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
 }
 
+/* En-tête des épisodes */
 .episode-header {
     text-align: center;
     background-color: #1f1f1f;
@@ -120,6 +108,7 @@ nav .logo:hover {
     text-decoration: underline;
 }
 
+/* Conteneur d'épisode */
 .episode-container {
     position: relative;
     text-align: center;
@@ -127,23 +116,24 @@ nav .logo:hover {
 
 .episode-container img {
     width: 100%;
-    max-width: 100%; /* S'adapte à la largeur de l'écran */
+    max-width: 100%;
     border-radius: 15px;
     margin-bottom: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Icône de lecture */
 .player-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem; /* Réduit la taille sur mobile */
+    font-size: 3rem;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 60px; /* Ajustement pour mobile */
-    height: 60px; /* Ajustement pour mobile */
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,6 +142,7 @@ nav .logo:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Pied de page */
 footer {
     background-color: #1f1f1f;
     color: #e0e0e0;
@@ -171,12 +162,13 @@ footer a {
     margin: 0 0.5rem;
 }
 
+/* Boutons de navigation */
 .buttons-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
-    flex-wrap: wrap; /* Permet de s'adapter sur mobile */
+    flex-wrap: wrap;
 }
 
 .nav-button {
@@ -202,6 +194,7 @@ footer a {
     cursor: not-allowed;
 }
 
+/* Média Queries */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -228,17 +221,17 @@ footer a {
     }
 
     .episode-header h1 {
-        font-size: 1.5rem; /* Taille réduite sur mobile */
+        font-size: 1.5rem;
     }
 
     .episode-header p {
-        font-size: 1rem; /* Taille réduite sur mobile */
+        font-size: 1rem;
     }
 
     .player-icon {
-        font-size: 2.5rem; /* Réduit la taille sur mobile */
-        width: 50px; /* Ajustement pour mobile */
-        height: 50px; /* Ajustement pour mobile */
+        font-size: 2.5rem;
+        width: 50px;
+        height: 50px;
     }
 
     .nav-button {
