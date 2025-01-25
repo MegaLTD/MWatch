@@ -15,6 +15,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Pour s'adapter aux petits écrans */
 }
 
 nav ul {
@@ -24,6 +25,7 @@ nav ul {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap; /* Permettre la flexibilité pour les petits écrans */
 }
 
 nav ul li {
@@ -42,45 +44,13 @@ nav ul li a:hover {
     color: #ff9800;
 }
 
-nav ul li input[type="text"] {
-    padding: 0.5rem 1rem;
-    border: 1px solid #444;
-    border-radius: 25px;
-    font-size: 1rem;
-    color: #e0e0e0;
-    background-color: #1f1f1f;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-nav ul li input[type="text"]:focus {
-    border-color: #ff9800;
-}
-
 nav .logo {
-    margin-top: 4px;
-    margin-bottom: -4px;
     height: 50px;
     transition: transform 0.3s ease;
 }
 
 nav .logo:hover {
     transform: scale(1.08);
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        gap: 1rem;
-    }
-
-    nav ul li input[type="text"] {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    nav .logo {
-        height: 30px;
-    }
 }
 
 .container {
@@ -92,18 +62,18 @@ nav .logo:hover {
 .episode-header {
     text-align: center;
     background-color: #1f1f1f;
-    padding: 0.2rem;
+    padding: 0.5rem;
     border-radius: 15px;
     margin-bottom: 2rem;
 }
 
 .episode-header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #ff9800;
 }
 
 .episode-header p {
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: whitesmoke;
     text-decoration: underline;
 }
@@ -115,16 +85,11 @@ nav .logo:hover {
 
 .episode-container img {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%; /* S'adapte à la largeur de l'écran */
     border-radius: 15px;
     margin-bottom: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.episode-container img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
 
 .player-icon {
@@ -132,42 +97,17 @@ nav .logo:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 4rem;
+    font-size: 3rem; /* Réduit la taille sur mobile */
     color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 80px;
-    height: 80px;
+    width: 60px; /* Ajustement pour mobile */
+    height: 60px; /* Ajustement pour mobile */
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.player-icon:hover {
-    transform: translate(-50%, -50%) scale(1.15);
-    background-color: rgba(255, 152, 0, 0.9);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-}
-
-.hidden {
-    display: none;
-}
-
-video {
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease;
-    opacity: 0;
-}
-
-video.visible {
-    opacity: 1;
 }
 
 footer {
@@ -180,7 +120,7 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 footer a {
@@ -189,37 +129,69 @@ footer a {
     margin: 0 0.5rem;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
 .buttons-container {
-display: flex;
-justify-content: center;
-gap: 1rem;
-margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap; /* Permet de s'adapter sur mobile */
 }
 
 .nav-button {
-font-family: 'Cairo';
-padding: 0.5rem 1.5rem;
-background-color: #1f1f1f;
-color: #fff;
-border: 2px solid #ff9800;
-border-radius: 25px;
-cursor: pointer;
-font-size: 1.2rem;
-transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 0.5rem 1rem;
+    background-color: #1f1f1f;
+    color: #fff;
+    border: 2px solid #ff9800;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-button:hover {
-background-color: #ff9800;
-color: #121212;
-transform: scale(1.1);
+    background-color: #ff9800;
+    color: #121212;
+    transform: scale(1.1);
 }
 
 .nav-button:disabled {
-background-color: #444;
-color: #aaa;
-cursor: not-allowed;
+    background-color: #444;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Ajout des media queries pour les écrans de petite taille */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Vertical sur mobile */
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    nav .logo {
+        height: 40px;
+    }
+
+    .episode-header h1 {
+        font-size: 1.5rem; /* Taille réduite sur mobile */
+    }
+
+    .episode-header p {
+        font-size: 1rem; /* Taille réduite sur mobile */
+    }
+
+    .player-icon {
+        font-size: 2.5rem; /* Réduit la taille sur mobile */
+        width: 50px; /* Ajustement pour mobile */
+        height: 50px; /* Ajustement pour mobile */
+    }
+
+    .nav-button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
 }
