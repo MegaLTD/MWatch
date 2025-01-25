@@ -9,13 +9,15 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="../">
-                <img src="../megawatch.png" alt="Logo MegaWatch" class="logo">
-            </a></li>
-            <li><a href="../">الرئيسية</a></li>
-            <li><a href="../">أفلام</a></li>
-            <li><a href="../">مسلسلات</a></li>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul id="menu">
+            <li><a href="https://megawatch.eu.org"><img src="megawatch.png" alt="Logo MegaWatch" class="logo"></a></li>
+            <li><a href="https://megawatch.eu.org">الرئيسية</a></li>
+            <li><a href="#" onclick="filterContent('film')">أفلام</a></li>
+            <li><a href="#" onclick="filterContent('serie')">مسلسلات</a></li>
+            <li>
+                <input type="text" id="search-bar" placeholder="ابحث عن اسم..." oninput="searchContent(event)" />
+            </li>
         </ul>
     </nav>
     
