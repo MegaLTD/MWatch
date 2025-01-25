@@ -1,7 +1,5 @@
-/* Importation de la police Cairo */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
-/* Styles globaux */
 body {
     font-family: 'Cairo', sans-serif;
     margin: 0;
@@ -11,7 +9,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Navigation */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -19,19 +16,18 @@ body {
     width: 100%;
 }
 
-/* Navigation principale */
 nav {
     background-color: #1f1f1f;
     padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
 }
 
-/* Conteneur principal */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -39,18 +35,16 @@ nav {
     width: 100%;
 }
 
-/* Logo */
-nav .logo {
+.logo {
     height: 50px;
     transition: transform 0.3s ease;
 }
 
-nav .logo:hover {
+.logo:hover {
     transform: scale(1.08);
 }
 
-/* Liste des liens */
-nav ul {
+ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
@@ -58,35 +52,25 @@ nav ul {
     padding: 0;
 }
 
-nav ul.hidden {
+ul.hidden {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #1f1f1f;
-    padding: 1rem;
-    border-radius: 0 0 10px 10px;
-    width: 200px;
-    text-align: center;
 }
 
 nav ul li {
     margin: 0.5rem 0;
 }
 
-nav ul li a {
+ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+ul li a:hover {
     color: #ff9800;
 }
 
-/* Bouton burger */
 .burger {
     display: none;
     cursor: pointer;
@@ -220,19 +204,23 @@ footer a {
     .burger {
         display: block;
     }
-    nav ul {
+    ul {
         flex-direction: column;
+        background-color: #1f1f1f;
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: #1f1f1f;
         width: 100%;
         padding: 1rem;
         border-top: 2px solid #444;
-        z-index: 100;
+        z-index: 1000;
     }
 
-    nav ul li {
+    ul.hidden {
+        display: none;
+    }
+
+    ul li {
         margin: 0.5rem 0;
     }
 
