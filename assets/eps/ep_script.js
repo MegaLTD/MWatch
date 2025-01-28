@@ -80,3 +80,8 @@ if (!checkParamsAndRedirect()) {
             window.location.href = 'https://megawatch.eu.org';
         });
 }
+
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+}
