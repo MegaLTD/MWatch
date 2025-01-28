@@ -161,6 +161,12 @@ nav .logo:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+.player-icon:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    background-color: rgba(255, 152, 0, 0.9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
 footer {
     background-color: #1f1f1f;
     color: #e0e0e0;
