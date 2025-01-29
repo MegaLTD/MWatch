@@ -26,9 +26,18 @@ fetch("../series.json")
             const imgEpisodes = series.img_ep || [];
 
             for (let i = 1; i <= episodeCount; i++) {
-                // Créer un conteneur pour chaque épisode
-                const episodeDiv = document.createElement("div");
-                episodeDiv.className = "episode-item";
+                // Créer une carte pour chaque épisode
+                const episodeCard = document.createElement("div");
+                episodeCard.className = "episode-card";
+
+                // Ajouter une miniature si disponible
+                if (imgEpisodes[i - 1]) {
+                    const thumbnail = document.createElement("img");
+                    thumbnail.src = imgEpisodes[i - 1];
+                    thumbnail.alt = `الحلقة ${i}`;
+                    thumbnail.className = "episode-thumbnail";
+                    episodeCard.appendChild(thumbnail);
+                }
 
                 // Créer le bouton
                 const button = document.createElement("button");
@@ -39,18 +48,11 @@ fetch("../series.json")
                     window.location.href = redirectUrl;
                 });
 
-                // Ajouter une miniature si disponible
-                if (imgEpisodes[i - 1]) {
-                    const thumbnail = document.createElement("img");
-                    thumbnail.src = imgEpisodes[i - 1];
-                    thumbnail.alt = `الحلقة ${i}`;
-                    thumbnail.className = "episode-thumbnail";
-                    episodeDiv.appendChild(thumbnail);
-                }
+                // Ajouter le bouton à la carte
+                episodeCard.appendChild(button);
 
-                // Ajouter le bouton et le conteneur à la page
-                episodeDiv.appendChild(button);
-                episodesContainer.appendChild(episodeDiv);
+                // Ajouter la carte au conteneur
+                episodesContainer.appendChild(episodeCard);
             }
         } else {
             window.location.href = "../";
