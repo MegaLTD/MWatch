@@ -37,6 +37,12 @@ fetch("../series.json")
                     thumbnail.alt = `الحلقة ${i}`;
                     thumbnail.className = "episode-thumbnail";
                     episodeCard.appendChild(thumbnail);
+
+                    // Ajouter un gestionnaire de clic sur l'image
+                    thumbnail.addEventListener("click", () => {
+                        const redirectUrl = `../episode.html?id=${numericId}&ep=${i}`;
+                        window.location.href = redirectUrl;
+                    });
                 }
 
                 // Créer le bouton
@@ -53,6 +59,12 @@ fetch("../series.json")
 
                 // Ajouter la carte au conteneur
                 episodesContainer.appendChild(episodeCard);
+
+                // Ajouter un gestionnaire de clic sur la carte entière
+                episodeCard.addEventListener("click", () => {
+                    const redirectUrl = `../episode.html?id=${numericId}&ep=${i}`;
+                    window.location.href = redirectUrl;
+                });
             }
         } else {
             window.location.href = "../";
