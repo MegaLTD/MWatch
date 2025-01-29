@@ -200,12 +200,29 @@ footer p {
 
 .episode-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1.5rem;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+}
+.episode-card {
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.episode-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
 }
 
 .episode-button {
@@ -218,6 +235,7 @@ footer p {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    text-decoration: none;
 }
 
 .episode-button:hover {
@@ -272,10 +290,11 @@ footer p {
 }
 
 .episode-thumbnail {
-    width: 80px;
-    height: 50px;
+    width: 100%;
+    height: 150px; 
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 
