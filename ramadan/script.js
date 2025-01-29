@@ -24,6 +24,7 @@ fetch("../series.json")
             episodesContainer.className = "episode-grid";
 
             const episodeCount = series.nbr_episodes;
+            const imgEpisodes = series.img_ep || [];
 
             for (let i = 1; i <= episodeCount; i++) {
                 const button = document.createElement("button");
@@ -35,7 +36,15 @@ fetch("../series.json")
                     window.location.href = redirectUrl;
                 });
 
+                if (imgEpisodes[i - 1]) {
+                    const thumbnail = document.createElement("img");
+                    thumbnail.src = imgEpisodes[i - 1];
+                    thumbnail.alt = `الحلقة ${i}`;
+                    thumbnail.className = "episode-thumbnail";
+                    episodeDiv.appendChild(thumbnail);
+                }
                 episodesContainer.appendChild(button);
+                episodesContainer.appendChild(episodeDiv);
             }
         } else {
             window.location.href = "../";
