@@ -330,13 +330,23 @@ footer p {
         padding: 0.5rem;
     }
     .episode-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Réduction de la taille */
         gap: 1rem;
+        padding: 1rem;
+    }
+
+    .episode-card {
+        padding: 0.8rem;
+    }
+
+    .episode-thumbnail {
+        height: 120px; /* Réduction de la hauteur de l’image */
+        border-radius: 8px;
     }
 
     .episode-button {
+        padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
-        padding: 0.7rem 1rem;
     }
 
     header h1 {
