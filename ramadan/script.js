@@ -10,7 +10,6 @@ fetch("../series.json")
         }
 
         const numericId = parseInt(seriesId, 10);
-
         const series = seriesData.find(item => item.id === numericId);
 
         if (series) {
@@ -27,15 +26,20 @@ fetch("../series.json")
             const imgEpisodes = series.img_ep || [];
 
             for (let i = 1; i <= episodeCount; i++) {
+                // Créer un conteneur pour chaque épisode
+                const episodeDiv = document.createElement("div");
+                episodeDiv.className = "episode-item";
+
+                // Créer le bouton
                 const button = document.createElement("button");
                 button.textContent = `الحلقة ${i}`;
                 button.className = "episode-button";
-
                 button.addEventListener("click", () => {
                     const redirectUrl = `../episode.html?id=${numericId}&ep=${i}`;
                     window.location.href = redirectUrl;
                 });
 
+                // Ajouter une miniature si disponible
                 if (imgEpisodes[i - 1]) {
                     const thumbnail = document.createElement("img");
                     thumbnail.src = imgEpisodes[i - 1];
@@ -43,7 +47,9 @@ fetch("../series.json")
                     thumbnail.className = "episode-thumbnail";
                     episodeDiv.appendChild(thumbnail);
                 }
-                episodesContainer.appendChild(button);
+
+                // Ajouter le bouton et le conteneur à la page
+                episodeDiv.appendChild(button);
                 episodesContainer.appendChild(episodeDiv);
             }
         } else {
@@ -55,7 +61,6 @@ fetch("../series.json")
         console.error("Error", error);
         window.location.href = "https://megawatch.eu.org";
     });
-
 
 function toggleMenu() {
     const menu = document.getElementById('menu');
