@@ -271,16 +271,6 @@ footer p {
     margin-bottom: 10px;
 }
 
-.episode-button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
 .episode-thumbnail {
     width: 80px;
     height: 50px;
