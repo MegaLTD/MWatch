@@ -7,5 +7,14 @@
     "nbr_episodes": 10,
     "image": "https://i.imgur.com/VWDmS1e.jpeg",
     "img_ep": ["https://i.imgur.com/PPCWlzx.jpeg", "https://i.imgur.com/6I86YC6.jpeg", "https://i.imgur.com/QrQH0tw.jpeg", "https://i.imgur.com/RgyQUar.jpeg", "https://i.imgur.com/T4nxQP5.jpeg", "https://i.imgur.com/754LXEn.jpeg", "https://i.imgur.com/UVguDTH.jpeg", "https://i.imgur.com/e9Z81JB.jpeg", "https://i.imgur.com/l73viTx.jpeg", "https://i.imgur.com/aaoyY1u.jpeg"]
+  },
+  {
+    "id" : 2,
+    "titre": "مسلسل العتاولة",
+    "name": "El-_Atawla",
+    "annee": 2024,
+    "nbr_episodes": 30,
+    "image": "https://i.imgur.com/OA7gqXQ.jpeg",
+    "img_ep": ["https://i.imgur.com/GuperIS.jpeg"]
   }
 ]
