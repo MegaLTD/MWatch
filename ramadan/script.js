@@ -15,24 +15,57 @@ fetch("../series.json")
         if (series) {
 
             document.title = `مشاهدة حلقات ${series.titre} | ميغا ووتش`;
-            let metaDescription = document.querySelector("meta[name='description']");
-            if (metaDescription) {
-                metaDescription.setAttribute("content", series.description);
-            } else {
-                let newMeta = document.createElement("meta");
-                newMeta.name = "description";
-                newMeta.content = series.description;
-                document.head.appendChild(newMeta);
-            }
-            let ogImage = document.querySelector("meta[property='og:image']");
-            if (ogImage) {
-                ogImage.setAttribute("content", series.image);
-            } else {
-                let newOgImage = document.createElement("meta");
-                newOgImage.setAttribute("property", "og:image");
-                newOgImage.setAttribute("content", series.image);
-                document.head.appendChild(newOgImage);
-            }
+
+
+            // Dynamic SEO Meta Tags
+            const seoDescription = series.description.length > 160 ? 
+                                  series.description.substring(0, 160) + "..." : 
+                                  series.description;
+            
+            const metaTags = [
+                { name: 'description', content: seoDescription },
+                { property: 'og:title', content: `مشاهدة ${series.titre}` },
+                { property: 'og:description', content: seoDescription },
+                { property: 'og:image', content: series.image },
+                { property: 'og:url', content: window.location.href },
+                { name: 'twitter:title', content: `مشاهدة ${series.titre}` },
+                { name: 'twitter:description', content: seoDescription },
+                { name: 'twitter:image', content: series.image }
+            ];
+            
+            const head = document.getElementsByTagName('head')[0];
+            metaTags.forEach(tag => {
+                const meta = document.createElement('meta');
+                if (tag.name) meta.setAttribute('name', tag.name);
+                if (tag.property) meta.setAttribute('property', tag.property);
+                meta.setAttribute('content', tag.content);
+                head.appendChild(meta);
+            });
+            
+            // Structured Data (Schema.org)
+            const schemaScript = document.createElement('script');
+            schemaScript.type = 'application/ld+json';
+            const structuredData = {
+                "@context": "https://schema.org",
+                "@type": "TVSeries",
+                "name": series.titre,
+                "description": series.description,
+                "image": series.image,
+                "numberOfEpisodes": series.nbr_episodes,
+                "copyrightYear": series.annee,
+                "potentialAction": {
+                    "@type": "WatchAction",
+                    "target": window.location.href
+                }
+            };
+            schemaScript.textContent = JSON.stringify(structuredData);
+            head.appendChild(schemaScript);
+            
+            // Canonical URL
+            const linkCanonical = document.createElement('link');
+            linkCanonical.rel = 'canonical';
+            linkCanonical.href = window.location.href;
+            head.appendChild(linkCanonical);
 
             const header = document.getElementById("series-header");
             header.style.backgroundImage = `url('${series.image}')`;
