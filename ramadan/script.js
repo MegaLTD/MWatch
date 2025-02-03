@@ -13,6 +13,27 @@ fetch("../series.json")
         const series = seriesData.find(item => item.id === numericId);
 
         if (series) {
+
+            document.title = `مشاهدة حلقات ${series.titre} | ميغا ووتش`;
+            let metaDescription = document.querySelector("meta[name='description']");
+            if (metaDescription) {
+                metaDescription.setAttribute("content", series.description);
+            } else {
+                let newMeta = document.createElement("meta");
+                newMeta.name = "description";
+                newMeta.content = series.description;
+                document.head.appendChild(newMeta);
+            }
+            let ogImage = document.querySelector("meta[property='og:image']");
+            if (ogImage) {
+                ogImage.setAttribute("content", series.image);
+            } else {
+                let newOgImage = document.createElement("meta");
+                newOgImage.setAttribute("property", "og:image");
+                newOgImage.setAttribute("content", series.image);
+                document.head.appendChild(newOgImage);
+            }
+
             const header = document.getElementById("series-header");
             header.style.backgroundImage = `url('${series.image}')`;
 
