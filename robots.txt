@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://megawatch.eu.org/sitemap.xml
