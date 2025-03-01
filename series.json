@@ -237,7 +237,7 @@
     "annee": 2025,
     "nbr_episodes": 30,
     "image": "https://i.imgur.com/bXisA4x.jpeg",
-    "img_ep": []
+    "img_ep": ["https://i.imgur.com/h1TUr9j.jpeg", "https://i.imgur.com/48LZOMu.jpeg"]
   },
   {
     "id" : 2,
